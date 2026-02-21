@@ -5,6 +5,7 @@ from pathlib import Path
 
 def run_etl(input_path: Path, output_path: Path, min_total: float) -> int:
     df = pd.read_csv(input_path)
+    print("input path: {input_path}")
     #read count
     print(f"Read {len(df)} rows from {input_path}")
     print(f"Read {len(df)} rows from {input_path}")
@@ -35,6 +36,7 @@ def run_etl(input_path: Path, output_path: Path, min_total: float) -> int:
     # Load: write to CSV
     output_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_path, index=False)
+    print("loaded to {output_path}")
     return len(df)
 
 
