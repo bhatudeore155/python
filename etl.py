@@ -7,6 +7,8 @@ def run_etl(input_path: Path, output_path: Path, min_total: float) -> int:
     df = pd.read_csv(input_path)
     #read count
     print(f"Read {len(df)} rows from {input_path}")
+    print(f"Read {len(df)} rows from {input_path}")
+
 
     # Extract: already read
 
