@@ -5,11 +5,15 @@ from pathlib import Path
 
 def run_etl(input_path: Path, output_path: Path, min_total: float) -> int:
     df = pd.read_csv(input_path)
+    #read count
+    print(f"Read {len(df)} rows from {input_path}")
 
     # Extract: already read
 
     # Transform: drop duplicates
     df = df.drop_duplicates()
+    # drop count
+    print(f"Dropped duplicates, {len(df)} rows remain")
 
     # Fill numeric NaNs with column mean, non-numeric NaNs with 'unknown'
     numeric_cols = df.select_dtypes(include="number").columns.tolist()
