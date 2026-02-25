@@ -27,8 +27,9 @@ def transform_data(df):
     # Convert data types
     df['amount'] = df['amount'].astype(float)
     df['date'] = pd.to_datetime(df['date'])
+    df1 = df.filter(items=['name', 'amount', 'quantity', 'date'])
     
-    return df
+    return df1
 
 # Load
 def load_data(df, output_path):
