@@ -28,6 +28,8 @@ def transform_data(df):
     df['amount'] = df['amount'].astype(float)
     df['date'] = pd.to_datetime(df['date'])
     df1 = df.filter(items=['name', 'amount', 'quantity', 'date'])
+    # Reorder columns
+    df1 = df1[['name', 'date', 'quantity', 'amount']]
     
     return df1
 
