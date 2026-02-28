@@ -6,4 +6,9 @@ id,name,amount,quantity,date
 5,unknown_user,30,1,
 6,David,0,0,2026-02-15
 7,John,0,0,2026-02-22
+<<<<<<< HEAD
 9,loara,1,2,2026-02-28
+=======
+8,lorem,0,02026-02-22
+>>>>>>> d9c8ae23bb698919e7088a5b9a8bb9460a240b56
+
