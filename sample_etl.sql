@@ -15,9 +15,9 @@ CREATE TABLE IF NOT EXISTS staging.sales_raw (
 );
 
 -- Example data insertion into staging (would usually be handled by COPY/LOAD command)
--- INSERT INTO staging.sales_raw VALUES
---   (1, 100, 200, 2, 19.99, '2023-01-01'),
---   (2, 101, 201, 1, 5.50,  '2023-01-02');
+INSERT INTO staging.sales_raw VALUES
+  (1, 100, 200, 2, 19.99, '2023-01-01'),
+  (2, 101, 201, 1, 5.50,  '2023-01-02');
 
 -- 2. Transform: clean and aggregate
 
