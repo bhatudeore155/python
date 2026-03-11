@@ -4,7 +4,7 @@
 
 -- 1. Extract: read from source table (e.g. sales data from staging schema)
 -- (In practice this might be a SELECT FROM a CSV-loaded table or remote source.)
-
+---- this etl only for learning purpose, not for production use
 CREATE TABLE IF NOT EXISTS staging.sales_raw (
     order_id    INT,
     customer_id INT,
