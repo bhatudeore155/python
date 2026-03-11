@@ -4,7 +4,7 @@
 
 -- 1. Extract: read from source table (e.g. sales data from staging schema)
 -- (In practice this might be a SELECT FROM a CSV-loaded table or remote source.)
-
+---- this etl only for learning purpose, not for production use
 CREATE TABLE IF NOT EXISTS staging.sales_raw (
     order_id    INT,
     customer_id INT,
@@ -15,9 +15,9 @@ CREATE TABLE IF NOT EXISTS staging.sales_raw (
 );
 
 -- Example data insertion into staging (would usually be handled by COPY/LOAD command)
--- INSERT INTO staging.sales_raw VALUES
---   (1, 100, 200, 2, 19.99, '2023-01-01'),
---   (2, 101, 201, 1, 5.50,  '2023-01-02');
+INSERT INTO staging.sales_raw VALUES
+  (1, 100, 200, 2, 19.99, '2023-01-01'),
+  (2, 101, 201, 1, 5.50,  '2023-01-02');
 
 -- 2. Transform: clean and aggregate
 
